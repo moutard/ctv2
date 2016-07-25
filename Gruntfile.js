@@ -61,7 +61,10 @@ module.exports = function(grunt) {
                   reasons: true
               },
               watch: false,
-              keepalive: false
+              keepalive: false,
+              resolve: {
+                modulesDirectories: ['./lib']
+            }
           },
           background: {
                // webpack options
