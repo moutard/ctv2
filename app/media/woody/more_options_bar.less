@@ -1,0 +1,32 @@
+@import "variables.less";
+
+@topbar_height: 40px;
+
+.ct-settings_bar {
+  width: 100%;
+  min-width: @width_min_screen;
+  height: @topbar_height;
+  background-color: @ccgrey;
+  margin-bottom: @topbar_height;
+  border-bottom: 1px solid @azulgreen;
+
+  .ct-settings_bar_container {
+      margin: 0 @main_margin;
+
+      > .ct-options {
+        float: right;
+        width: 30px;
+        height: 40px;
+        padding: 0 5px;
+        cursor: pointer;
+
+        > img {
+            width: 30px;
+            height: 40px;
+        }
+        &:hover {
+            background-color: @bbgrey;
+        }
+      }
+  }
+}

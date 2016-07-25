@@ -1,0 +1,15 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+# node modules are for dev only.
+node_modules/
+
+# "build" folder that contains the released/compiled/processed files
+/build/
+
+# contains the third-party JS libraries we use in the app pulled from bower.
+/lib/**
+dist/
+.sass-cache/
+.idea/
+tmp/

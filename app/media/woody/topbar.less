@@ -1,0 +1,213 @@
+@import "variables.less";
+
+/**
+ * Sizes
+ */
+@topbar_height: 40px;
+@logo_width: 109px;
+@search_input_margin: 20px;
+@search_button_width: 77px;
+@search_button_padding: 10px;
+
+.ct-topbar {
+  width: 100%;
+  min-width: @width_min_screen;
+  position: fixed;
+  height: @topbar_height;
+  z-index:2;
+  background-color: @submagreen;
+  top: 0;
+
+
+  > .ct-topbar_container {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 @main_margin 0 @main_margin;
+
+
+      > .ct-logo_topbar {
+        float: left;
+        width: @logo_width;
+        min-width: @logo_width;
+        margin-right: @margin_normal;
+
+        -webkit-box-sizing: border-box;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: url('/media/images/topbar/ct-logo_mo.png');
+        background-size: contain;
+        background-position: 0 7px;
+        cursor: pointer;
+      }
+
+      > .ct-menu_topbar {
+        -webkit-box-sizing: border-box;
+        min-width: 125px;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+
+        > .ct-history_arrows {
+          margin: 15px;
+          width: 40px;
+
+          > .ct-history_arrow {
+            &.ct-active {
+              border-right-color: @azulgreen;
+              cursor: pointer;
+            }
+          }
+          > .ct-history_arrow_left {
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 8px solid @greygreen;
+            float: left;
+          }
+
+          > .ct-history_arrow_right {
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid @greygreen;
+            float: right;
+          }
+        }
+
+        > .ct-topbar_path {
+          padding-top: 10px;
+
+          > .ct-topbar_path_element {
+            position: relative;
+            font-size: 14px;
+            color: @azulgreen;
+            display: inline-block;
+            padding-left: 30px;
+            cursor: default;
+            max-width: 400px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              width: 11px;
+              height: 11px;
+              position: absolute;
+              left: 6px;
+              top: 4px;
+              border-right: solid 1px @azulgreen;
+              border-bottom: solid 1px @azulgreen;
+              -webkit-transform: rotate(-45deg);
+            }
+
+            &:first-letter {
+              text-transform: uppercase;
+            }
+
+            &:last-child {
+              color: @purewhite;
+              cursor: default;
+            }
+
+            &:first-child {
+              padding-left: 0;
+
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+
+        > .ct-favorites_menu_topbar {
+          float: left;
+          margin-top: 8px;
+          margin-left: 20px;
+          width: 18px;
+          height: 18px;
+          background-image: url('/media/images/common/ct-icons.png');
+          background-position: 0 -60px;
+          cursor: pointer;
+        }
+
+        > .ct-settings_menu_topbar {
+          float: right;
+          height: 18px;
+          width: 18px;
+          background-repeat: no-repeat;
+          background-image: url('/media/images/common/ct-icons.png');
+          background-position: -50px -10px;
+          cursor: pointer;
+          margin-top: 8px;
+          margin-right: 16px;
+        }
+      }
+
+      > .ct-contact {
+        float: right;
+        font-size: 14px;
+        color: @purewhite;
+        margin-top: 10px;
+      }
+
+    > .ct-search {
+      -webkit-box-sizing: border-box;
+      height: 100%;
+      width: 40%;
+      padding: 6px;
+
+      > .ct-search_field {
+        /*input fields do not heritate from ancestors' font*/
+        font-family: SourceSansPro-Light;
+        font-size: 14px;
+        height: 100%;
+        width: calc(~"100% - @{search_button_width}");
+        border: none;
+        outline: none;
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: @fagrey;
+      }
+
+      > .ct-search_button {
+        position: relative;
+        float: right;
+        height: 100%;
+        padding: 0px 10px 0px 10px;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        /*this is a trick to vertical-align a one-line text*/
+        line-height: @topbar_height;
+        background-color: @azulgreen;
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
+        cursor: pointer;
+
+        .ct-search_button_icon {
+            height: 100%;
+            width: 17px;
+            background-image: url('/media/images/common/ct-icons.png');
+            background-repeat: no-repeat;
+            background-position-x: -67px;
+            background-position-y: -5px;
+            float: left;
+        }
+      }
+    }
+
+    > .ct-topbar_hamburger_menu {
+        width: 40px;
+        height: 40px;
+        flex: 1;
+        cursor: pointer;
+        > img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+  }
+}
