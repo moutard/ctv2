@@ -19,8 +19,7 @@ module.exports = function(grunt) {
                files: [
                    {
                        expand: true,
-                       cwd: "app",
-                       src: ['**/*'],
+                       src: ['app/**'],
                        dest: DESTINATION_PATH
                    }
                ]
@@ -37,7 +36,10 @@ module.exports = function(grunt) {
            watch: false,
            keepalive: false,
            resolve: {
-             modulesDirectories: ['node_modules']
+             modulesDirectories: ['node_modules', 'app'],
+             alias: {
+               cotton: 'js/cotton.js'
+             }
            },
            plugins: IS_PROD ? [
              new webpack.optimize.UglifyJsPlugin({minimize: true})
@@ -45,25 +47,25 @@ module.exports = function(grunt) {
          },
          woody: {
               // webpack options
-              entry: DESTINATION_PATH + '/js/woody.js',
+              entry: DESTINATION_PATH + '/app/js/woody.js',
               output: {
-                  path: DESTINATION_PATH,
+                  path: DESTINATION_PATH + '/app',
                   filename: 'woody.min.js'
               }
           },
           background: {
                // webpack options
-               entry: DESTINATION_PATH + '/js/background.js',
+               entry: DESTINATION_PATH + '/app/js/background.js',
                output: {
-                   path: DESTINATION_PATH,
+                   path: DESTINATION_PATH + '/app',
                    filename: 'background.min.js'
                }
            },
            content_scripts: {
                 // webpack options
-                entry: DESTINATION_PATH + '/js/content_scripts.js',
+                entry: DESTINATION_PATH + '/app/js/content_scripts.js',
                 output: {
-                    path: DESTINATION_PATH,
+                    path: DESTINATION_PATH + '/app',
                     filename: 'content_scripts.min.js'
                 }
             },
