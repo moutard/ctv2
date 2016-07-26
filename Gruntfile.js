@@ -1,7 +1,10 @@
 module.exports = function(grunt) {
     'use strict';
 
+    // We build the app in the dist folder.
     var DESTINATION_PATH = './dist';
+
+    // We minify the app if prod env.
     var IS_PROD = (grunt.option('env') === 'prod' ? true : false);
 
     var compilerPackage = require('google-closure-compiler');
@@ -10,23 +13,7 @@ module.exports = function(grunt) {
     var webpack = require("webpack");
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        'bower-install-simple': {
-            options: {
-                color: true,
-                directory: 'lib'
-            },
-            prod: {
-                options: {
-                    production: true
-                }
-            },
-            dev: {
-                options: {
-                    production: false
-                }
-            }
-        },
+        'pkg': grunt.file.readJSON('package.json'),
         'copy': {
            dev: {
                files: [
@@ -50,7 +37,7 @@ module.exports = function(grunt) {
            watch: false,
            keepalive: false,
            resolve: {
-             modulesDirectories: ['./lib']
+             modulesDirectories: ['node_modules']
            },
            plugins: IS_PROD ? [
              new webpack.optimize.UglifyJsPlugin({minimize: true})
@@ -84,7 +71,6 @@ module.exports = function(grunt) {
       });
 
 
-      grunt.loadNpmTasks('grunt-bower-install-simple');
       grunt.loadNpmTasks('grunt-chrome-manifest');
       grunt.loadNpmTasks('grunt-webpack');
       grunt.loadNpmTasks('grunt-contrib-copy');
