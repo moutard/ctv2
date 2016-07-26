@@ -45,7 +45,7 @@ module.exports = function(grunt) {
          },
          woody: {
               // webpack options
-              entry: DESTINATION_PATH + '/src/woody.js',
+              entry: DESTINATION_PATH + '/js/woody.js',
               output: {
                   path: DESTINATION_PATH,
                   filename: 'woody.min.js'
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           },
           background: {
                // webpack options
-               entry: DESTINATION_PATH + '/src/background.js',
+               entry: DESTINATION_PATH + '/js/background.js',
                output: {
                    path: DESTINATION_PATH,
                    filename: 'background.min.js'
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
            },
            content_scripts: {
                 // webpack options
-                entry: DESTINATION_PATH + '/src/content_scripts.js',
+                entry: DESTINATION_PATH + '/js/content_scripts.js',
                 output: {
                     path: DESTINATION_PATH,
                     filename: 'content_scripts.min.js'

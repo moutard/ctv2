@@ -1,7 +1,6 @@
 require ('underscore');
 
-var Cotton = {};
-
+require ('./cotton.js');
 require ('./js/class.js');
 require ('./js/browser_action.js');
 require ('./config/init.js')
