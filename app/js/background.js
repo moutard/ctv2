@@ -26,5 +26,6 @@ require ('./utils/benchmark.js');
 require ('./db');
 require ('./model');
 require ('./translators');
+require ('./algo/common');
 
 console.log('start');
