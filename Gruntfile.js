@@ -11,7 +11,17 @@ module.exports = function(grunt) {
     compilerPackage.grunt(grunt);
 
     var webpack = require("webpack");
-
+    var webpack_plugins = [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        Cotton: 'cotton'
+      })
+    ];
+    if (IS_PROD) {
+      webpack_plugins.append(new webpack.optimize.UglifyJsPlugin({minimize: true}))
+    }
     grunt.initConfig({
         'pkg': grunt.file.readJSON('package.json'),
         'copy': {
@@ -41,9 +51,7 @@ module.exports = function(grunt) {
                cotton: 'js/cotton.js'
              }
            },
-           plugins: IS_PROD ? [
-             new webpack.optimize.UglifyJsPlugin({minimize: true})
-           ] : []
+           plugins: webpack_plugins
          },
          woody: {
               // webpack options
