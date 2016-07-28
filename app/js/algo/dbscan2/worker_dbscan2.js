@@ -7,24 +7,19 @@
 
 // Worker has no access to external librairies loaded in the main thread.
 // Cotton.lib.
-importScripts('../../../lib/class.js');
-importScripts('../../../lib/underscore.min.js');
-
-importScripts('../../init.js');
+require ('underscore');
+require ('class.js');
+require ('cotton');
 
 // Cotton.utils.
-importScripts('../../utils/url_parser.js');
+require ('utils/url_parser.js');
 
 // Cotton.config
-importScripts('../../config/init.js');
-importScripts('../../config/config.js');
+require ('config/')
 
 // Cotton.algo.
-importScripts('../../algo/init.js');
-importScripts('../../algo/dbscan/score/init.js');
-importScripts('../../algo/dbscan/score/dbrecord_score.js');
-importScripts('../../algo/dbscan/dbscan.js');
-importScripts('../../algo/dbscan2/find_closest_google_search_page.js');
+require ('algo/dbscan/');
+require ('algo/dbscan2/find_closest_google_search_page.js')
 
 /**
  * Loop through all the HistoryItems and compute their distances to each other.
@@ -46,6 +41,7 @@ function handleHistoryItem(lHistoryItems) {
   dData['iNbCluster'] = iNbCluster;
   dData['lHistoryItems'] = lHistoryItems;
 
+  // self is defined by the worker api.
   // Send data to the main thread. Data are serialized.
   self.postMessage(dData);
 

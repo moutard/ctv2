@@ -1,5 +1,5 @@
 'use strict';
-
+var UrlParser = require ('utils/url_parser.js');
 /**
  * Given an array of historyItems labeled with a "clusterId", return a list of
  * stories, that contains all historyItems with the same label.

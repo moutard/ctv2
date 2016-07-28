@@ -1,4 +1,6 @@
 'use strict'
+var UrlParser = require ('utils/url_parser.js');
+var Benchmark = require ('utils/benchmark.js');
 
 Cotton.Algo.Common.Words.isInBlackList = function(sWord) {
   // The blackList is pre-sorted to make a binary search.

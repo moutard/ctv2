@@ -1,5 +1,7 @@
 'use strict';
 var Cotton = require('cotton');
+var Benchmark = require ('utils/benchmark.js');
+
 Cotton.Core.TempDatabase = Class.extend({
 
   _lChromeHistoryItems: undefined,

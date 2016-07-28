@@ -1,5 +1,5 @@
 'use strict';
-
+var UrlParser = require ('utils/url_parser.js');
 /**
  * Becarfull we know that all the elemnts in the pool are the last of there category
  * so it's more like visitItems that historyItems. So we can use the old version.
@@ -97,4 +97,3 @@ Cotton.Algo.findClosestSearchPage = function(oHistoryItem, oSearchCache) {
 
   return oHistoryItem;
 };
-

@@ -264,3 +264,4 @@ UrlParser.prototype.replaceHexa = function(sEscaped) {
 // Extract q (keywords queries) can give an important information about a story.
 // Extract aq (keywords queries you did just before the current query). Should
 // be very pertinent to join two queries.
+module.exports = UrlParser;

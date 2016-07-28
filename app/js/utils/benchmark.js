@@ -35,3 +35,5 @@ var Benchmark = Class.extend({
     }
   },
 });
+
+module.exports = Benchmark;

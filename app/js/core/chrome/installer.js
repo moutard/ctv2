@@ -1,5 +1,6 @@
 'use strict';
 var Cotton = require('cotton');
+var Benchmark = require ('utils/benchmark.js');
 
 Cotton.Core.Installer = Class.extend({
 
@@ -33,7 +34,7 @@ Cotton.Core.Installer = Class.extend({
    initInstallWorker : function() {
     var self = this;
     // Instantiate a new worker with the code in the specified file.
-    self._wInstallWorker = new Worker('src/algo/dbscan3/worker_dbscan3.js');
+    self._wInstallWorker = new Worker('worker_dbscan3.min.js');
     var lStories = [];
     var iSessionCount = 0;
     var iTotalSessions = 0;

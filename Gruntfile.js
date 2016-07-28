@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         $: 'jquery',
         jQuery: 'jquery',
         'window.jQuery': 'jquery',
+        '_': 'underscore',
         Cotton: 'cotton'
       })
     ];
@@ -46,9 +47,9 @@ module.exports = function(grunt) {
            watch: false,
            keepalive: false,
            resolve: {
-             modulesDirectories: ['node_modules', 'app'],
+             modulesDirectories: ['node_modules', 'app/js'],
              alias: {
-               cotton: 'js/cotton.js'
+               cotton: 'cotton.js'
              }
            },
            plugins: webpack_plugins
@@ -77,6 +78,22 @@ module.exports = function(grunt) {
                     filename: 'content_scripts.min.js'
                 }
             },
+            worker_dbscan2: {
+              // webpack options
+              entry: DESTINATION_PATH + '/app/js/algo/dbscan2/worker_dbscan2.js',
+              output: {
+                  path: DESTINATION_PATH + '/app',
+                  filename: 'worker_dbscan2.min.js'
+              }
+            },
+            worker_dbscan3: {
+              // webpack options
+              entry: DESTINATION_PATH + '/app/js/algo/dbscan3/worker_dbscan3.js',
+              output: {
+                  path: DESTINATION_PATH + '/app',
+                  filename: 'worker_dbscan3.min.js'
+              }
+            }
         }
       });
 
@@ -86,7 +103,7 @@ module.exports = function(grunt) {
       grunt.loadNpmTasks('grunt-contrib-copy');
 
       grunt.registerTask('install', ['bower-install-simple']);
-      grunt.registerTask('build', ['copy:dev', 'webpack:woody', 'webpack:background', 'webpack:content_scripts']);
+      grunt.registerTask('build', ['copy:dev', 'webpack:woody', 'webpack:background', 'webpack:content_scripts', 'webpack:worker_dbscan2', 'webpack:worker_dbscan3']);
 
 
 };

@@ -1,5 +1,5 @@
 'use strict';
-
+var UrlParser = require ('utils/url_parser.js');
 Cotton.Algo.Tools = {};
 
 Cotton.Algo.Tools.LooseCondition = function(sWord) {
@@ -172,4 +172,3 @@ Cotton.Algo.Tools.computeBagOfWordsForHistoryItem = function(oHistoryItem) {
     }
     return oHistoryItem;
 };
-

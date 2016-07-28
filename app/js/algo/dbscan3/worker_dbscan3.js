@@ -7,20 +7,21 @@
 
 // Worker has no access to external librairies loaded in the main thread.
 // Cotton.lib.
-importScripts('../../../lib/class.js');
+// Worker has no access to external librairies loaded in the main thread.
+// Cotton.lib.
+require ('underscore');
+require ('class.js');
+require ('cotton');
 
-importScripts('../../init.js');
+// Cotton.utils.
+require ('utils/url_parser.js');
 
 // Cotton.config
-importScripts('../../config/init.js');
-importScripts('../../config/config.js');
+require ('config/')
 
 // Cotton.algo.
-importScripts('../../algo/init.js');
-importScripts('../../algo/dbscan/score/init.js');
-importScripts('../../algo/dbscan/score/dbrecord_score.js');
-importScripts('../../algo/dbscan/dbscan.js');
-importScripts('../../algo/dbscan3/detect_sessions.js');
+require ('algo/dbscan/');
+require ('algo/dbscan3/detect_sessions.js');
 
 /**
  * This method has 3 steps : - Separate Roughly the historyItems in sessions. -

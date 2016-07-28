@@ -1,5 +1,5 @@
 'use strict';
-
+var UrlParser = require ('utils/url_parser.js');
 /**
  * HistoryItem
  *
