@@ -161,7 +161,7 @@ $search_button_padding: 10px;
         font-family: SourceSansPro-Light;
         font-size: 14px;
         height: 100%;
-        width: calc(~"100% - ${search_button_width}");
+        width: calc(100% - #{$search_button_width});
         border: none;
         outline: none;
         padding: 0;

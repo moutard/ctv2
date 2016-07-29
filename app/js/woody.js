@@ -1,8 +1,14 @@
 const angular = require('angular');
 require('angular-route');
 require('view/ng/topbar/topbar.directive.js');
+require('view/ng/footer/footer.directive.js');
+require('view/ng/pages/home/home.directive.js');
+require('view/ng/timeline/timeline.directive.js');
+require('view/ng/components/shelf/shelf.directive.js');
+require('view/ng/components/sticker/sticker.directive.js');
 
-angular.module('app', ['ngRoute', 'topbar'])
+
+angular.module('app', ['ngRoute', 'topbar', 'footer', 'home', 'timeline', 'shelf', 'sticker'])
 .provider('Weather', function() {
   var apiKey = "";
 
