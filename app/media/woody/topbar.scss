@@ -1,21 +1,19 @@
-@import "variables.less";
-
 /**
  * Sizes
  */
-@topbar_height: 40px;
-@logo_width: 109px;
-@search_input_margin: 20px;
-@search_button_width: 77px;
-@search_button_padding: 10px;
+$topbar_height: 40px;
+$logo_width: 109px;
+$search_input_margin: 20px;
+$search_button_width: 77px;
+$search_button_padding: 10px;
 
 .ct-topbar {
   width: 100%;
-  min-width: @width_min_screen;
+  min-width: $width_min_screen;
   position: fixed;
-  height: @topbar_height;
+  height: $topbar_height;
   z-index:2;
-  background-color: @submagreen;
+  background-color: $submagreen;
   top: 0;
 
 
@@ -23,14 +21,14 @@
       height: 100%;
       display: flex;
       justify-content: space-between;
-      margin: 0 @main_margin 0 @main_margin;
+      margin: 0 $main_margin 0 $main_margin;
 
 
       > .ct-logo_topbar {
         float: left;
-        width: @logo_width;
-        min-width: @logo_width;
-        margin-right: @margin_normal;
+        width: $logo_width;
+        min-width: $logo_width;
+        margin-right: $margin_normal;
 
         -webkit-box-sizing: border-box;
         height: 100%;
@@ -55,21 +53,21 @@
 
           > .ct-history_arrow {
             &.ct-active {
-              border-right-color: @azulgreen;
+              border-right-color: $azulgreen;
               cursor: pointer;
             }
           }
           > .ct-history_arrow_left {
             border-top: 5px solid transparent;
             border-bottom: 5px solid transparent;
-            border-right: 8px solid @greygreen;
+            border-right: 8px solid $greygreen;
             float: left;
           }
 
           > .ct-history_arrow_right {
             border-top: 5px solid transparent;
             border-bottom: 5px solid transparent;
-            border-left: 8px solid @greygreen;
+            border-left: 8px solid $greygreen;
             float: right;
           }
         }
@@ -80,7 +78,7 @@
           > .ct-topbar_path_element {
             position: relative;
             font-size: 14px;
-            color: @azulgreen;
+            color: $azulgreen;
             display: inline-block;
             padding-left: 30px;
             cursor: default;
@@ -97,8 +95,8 @@
               position: absolute;
               left: 6px;
               top: 4px;
-              border-right: solid 1px @azulgreen;
-              border-bottom: solid 1px @azulgreen;
+              border-right: solid 1px $azulgreen;
+              border-bottom: solid 1px $azulgreen;
               -webkit-transform: rotate(-45deg);
             }
 
@@ -107,7 +105,7 @@
             }
 
             &:last-child {
-              color: @purewhite;
+              color: $purewhite;
               cursor: default;
             }
 
@@ -148,7 +146,7 @@
       > .ct-contact {
         float: right;
         font-size: 14px;
-        color: @purewhite;
+        color: $purewhite;
         margin-top: 10px;
       }
 
@@ -163,13 +161,13 @@
         font-family: SourceSansPro-Light;
         font-size: 14px;
         height: 100%;
-        width: calc(~"100% - @{search_button_width}");
+        width: calc(~"100% - ${search_button_width}");
         border: none;
         outline: none;
         padding: 0;
         padding-left: 20px;
         padding-right: 20px;
-        background-color: @fagrey;
+        background-color: $grey_fa;
       }
 
       > .ct-search_button {
@@ -181,8 +179,8 @@
         color: white;
         text-align: center;
         /*this is a trick to vertical-align a one-line text*/
-        line-height: @topbar_height;
-        background-color: @azulgreen;
+        line-height: $topbar_height;
+        background-color: $azulgreen;
         border-top-right-radius: 1px;
         border-bottom-right-radius: 1px;
         cursor: pointer;

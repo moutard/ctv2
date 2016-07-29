@@ -1,14 +1,4 @@
-/**
- * Colors
- */
-@purewhite: #FFFFFF;
-@pureblack: #000000;
-@azulgreen: #52C8B8;
-@degrey: #DEDEDE;
-@edgrey: #EDEDED;
-@33grey: #333333;
-@b2grey: #B2B2B2;
-@a6grey: #A6A6A6;
+
 
 .ct-card {
   position: relative;
@@ -16,7 +6,7 @@
   height: 250px;
   float: left;
   margin: 20px 20px 20px 20px;
-  background-color: @purewhite;
+  background-color: $purewhite;
   -webkit-box-sizing: border-box;
 
   > .ct-delete_card {
@@ -32,7 +22,7 @@
     -webkit-transform: rotate(45deg);
     cursor: pointer;
     opacity: 0.3;
-    color: @purewhite;
+    color: $purewhite;
   }
 
   &:hover {
@@ -69,7 +59,7 @@
           left: 183px;
           width: 60px;
           height: 60px;
-          border: solid 2px @purewhite;
+          border: solid 2px $purewhite;
           border-radius: 32px;
           background-color: rgba(0,0,0,0.3);
           content: "";
@@ -104,7 +94,7 @@
 
   &.ct-default_card {
     min-height: 105px;
-    border: solid 1px @degrey;
+    border: solid 1px $grey_de;
     box-shadow: 0px 2px 2px 0px #ededed;
 
     > .ct-media_image {
@@ -127,7 +117,7 @@
       > .ct-card_title {
         width: 100%;
         font-size: 14px;
-        color: @33grey;
+        color: $grey_33;
         text-align: center;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -142,7 +132,7 @@
         position: absolute;
         bottom: 50px;
         text-align: center;
-        color: @a6grey;
+        color: $grey_26;
         width: 100%;
         font-size: 12px;
         overflow: hidden;
@@ -159,7 +149,7 @@
         > .ct-paragraph {
           font-size: 11px;
           text-align: justify;
-          color: @b2grey;
+          color: $grey_b3;
 
           &:first-child {
             margin-top: 0;
@@ -170,7 +160,7 @@
           }
 
           > .ct-quote {
-            color: @azulgreen;
+            color: $azulgreen;
           }
         }
       }
@@ -193,7 +183,7 @@
       margin-left: 31px;
       background-color: rgba(0,0,0,0.25);
       border-radius: 14px;
-      color: @purewhite;
+      color: $purewhite;
       text-align: center;
       font-size: 13px;
       padding-top: 5px;
@@ -208,7 +198,7 @@
       margin-top: 210px;
       background-color: rgba(0,0,0,0.5);
       border-radius: 14px;
-      color: @purewhite;
+      color: $purewhite;
       text-align: center;
       font-size: 13px;
       padding-top: 5px;
@@ -216,7 +206,7 @@
       cursor: pointer;
 
       &.ct-suggest_selected {
-        background-color: @azulgreen;
+        background-color: $azulgreen;
 
         &:before {
           content: "";

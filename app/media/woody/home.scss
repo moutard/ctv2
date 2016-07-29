@@ -1,23 +1,21 @@
-@import "variables.less";
-
 /**
  * Sizes
  */
-@topbar_height: 40px;
+$topbar_height: 40px;
 
 .ct-home {
-  padding-top : @topbar_height;
+  padding-top : $topbar_height;
 
   > .ct-igniter {
-    background-color: @e8grey;
+    background-color: $grey_e8;
 
     &.ct-welcome {
       height: 500px;
     }
 
     > .ct-igniter_container {
-      margin: 0 @main_margin 0 @main_margin;
-      padding: @margin_normal 0;
+      margin: 0 $main_margin 0 $main_margin;
+      padding: $margin_normal 0;
 
       > .ct-igniter_welcome {
         margin-top: 60px;
@@ -25,7 +23,7 @@
         cursor: default;
         font-size: 36px;
         font-family: SourceSansPro-Light;
-        color: @33grey;
+        color: $grey_33;
       }
 
       > .ct-igniter_explainer {
@@ -34,7 +32,7 @@
         margin-top: 10px;
         margin-bottom: 50px;
         font-size: 18px;
-        color: @33grey;
+        color: $grey_33;
         font-family: SourceSansPro-Light;
       }
 
@@ -42,9 +40,9 @@
         position: relative;
         width: 380px;
         height: 230px;
-        border: solid 1px @degrey;
+        border: solid 1px $grey_de;
         text-align: center;
-        background-color: @purewhite;
+        background-color: $purewhite;
         cursor: default;
         float: left;
 
@@ -55,13 +53,13 @@
 
         > .ct-creator_explainer_title {
           font-size: 20px;
-          color: @submagreen;
+          color: $submagreen;
           margin: 40px 0 10px 0;
         }
 
         > .ct-creator_explainer_text {
           font-size: 12px;
-          color: @a8grey;
+          color: $grey_a8;
           margin: 10px 0 10px 0;
         }
 
@@ -72,16 +70,16 @@
           position: relative;
           height: 28px;
           width: 320px;
-          border: solid 1px @edgrey;
+          border: solid 1px $grey_ed;
           padding: 0;
           padding-left: 10px;
           padding-right: 10px;
-          background-color: @fcgrey;
+          background-color: $grey_fc;
         }
 
         > .ct-creator_button {
-          color: @purewhite;
-          background-color: @ccgrey;
+          color: $purewhite;
+          background-color: $grey_cc;
           position: absolute;
           width: 100%;
           height: 24px;
@@ -90,7 +88,7 @@
           cursor: pointer;
 
           &.ct-active {
-            background-color: @azulgreen;
+            background-color: $azulgreen;
             cursor: pointer;
           }
         }
@@ -116,7 +114,7 @@
           width: 40px;
           font-size: 12px;
           text-align: center;
-          color: @33grey;
+          color: $grey_33;
 
           &:before {
             position: absolute;
@@ -137,8 +135,8 @@
             width: 5px;
             height: 5px;
             -webkit-transform: rotate(45deg);
-            border-bottom: solid 2px @purewhite;
-            border-right: solid 2px @purewhite;
+            border-bottom: solid 2px $purewhite;
+            border-right: solid 2px $purewhite;
           }
 
           &.ct-less {
@@ -154,7 +152,7 @@
   }
 
   > .ct-suggestor {
-    background-color: @e8grey;
+    background-color: $grey_e8;
     > .ct-suggestor_container {
       margin: auto;
 

@@ -1,7 +1,5 @@
-@import "variables.less";
-
-@lightyellow: #f9edbe;
-@darkyellow: #f0c36d;
+$lightyellow: #f9edbe;
+$darkyellow: #f0c36d;
 
 .ct-settings, .ct-favorites, .ct-ratings {
   width: 100%;
@@ -22,17 +20,17 @@
     position: relative;
     width: 714px;
     border-radius: 1px;
-    padding: @margin_normal;
+    padding: $margin_normal;
     margin: auto;
     margin-top: 130px;
-    background: @purewhite;
+    background: $purewhite;
 
     > .ct-settings_box_title {
       width : 694px;
       height: 20px;
       font-size: 20px;
       padding-bottom: 12px;
-      border-bottom: solid 1px @a8grey;
+      border-bottom: solid 1px $grey_a8;
     }
     > .ct-rate_us {
       padding-left: 10px;
@@ -42,7 +40,7 @@
         text-decoration: none;
         width: 70px;
         height: 20px;
-        background-color: @almondgreen;
+        background-color: $almondgreen;
         color: white;
         padding-left: 50px;
         padding-top: 4px;
@@ -83,9 +81,9 @@
         margin-top: 10px;
         margin-bottom: 15px;
         outline: none;
-        border: solid 1px @b3grey;
+        border: solid 1px $grey_b3;
         border-radius: 2px;
-        background-color: @fagrey;
+        background-color: $grey_fa;
         display: block;
         padding: 10px;
         font-family: SourceSansPro-Regular;
@@ -97,9 +95,9 @@
         margin-top: 10px;
         margin-bottom: 15px;
         outline: none;
-        border: solid 1px @b3grey;
+        border: solid 1px $grey_b3;
         border-radius: 2px;
-        background-color: @fagrey;
+        background-color: $grey_fa;
         display: block;
         padding: 10px;
         font-family: SourceSansPro-Regular;
@@ -109,14 +107,14 @@
       > .ct-feedback_submit {
         display: block;
         background: none;
-        border: solid 2px @66grey;
+        border: solid 2px $grey_66;
         border-radius: 6px;
         padding: 5px;
         width: 80px;
         margin: auto;
         font-family: SourceSansPro-Regular;
         font-size: 16px;
-        color: @66grey;
+        color: $grey_66;
         cursor: pointer;
         outline: none;
 
@@ -133,13 +131,13 @@
         width: 400px;
         font-size: 12px;
         text-align: center;
-        background-color: @lightyellow;
-        border: solid 1px @darkyellow;
+        background-color: $lightyellow;
+        border: solid 1px $darkyellow;
 
         > .ct-feedback_error {
 
           > .ct-feedback_retry {
-            color: @almondgreen;
+            color: $almondgreen;
             cursor: pointer;
           }
 

@@ -1,4 +1,3 @@
-@import "variables.less";
 
 @font-face {
   font-family: 'SourceSansPro-Light';
@@ -18,7 +17,7 @@ body {
   margin: 0;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
-  background-color: @f5grey;
+  background-color: $grey_f5;
   -webkit-user-select: none;
 
   a {
@@ -35,16 +34,16 @@ body {
     width: 100%;
 
     .ct-home, .ct-page {
-      padding-top : @topbar_height;
+      padding-top : $topbar_height;
     }
   }
 
   > footer {
     width: 100%;
-    padding-top: @margin_normal;
+    padding-top: $margin_normal;
     text-align: center;
-    padding-bottom: @margin_normal;
-    color: @66grey;
+    padding-bottom: $margin_normal;
+    color: $grey_66;
     > .ct-rate_us {
         cursor: pointer;
     }

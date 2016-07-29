@@ -1,5 +1,3 @@
-@import "variables.less";
-
 .ct-underline {
     position: relative;
     top: -2px;
@@ -13,7 +11,7 @@
   width: 396px;
   height: 250px;
   margin-left: 1px;
-  background: @f5grey;
+  background: $grey_f5;
   position: absolute;
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
   -webkit-border-radius: 2px 1px 1px 2px;
@@ -40,7 +38,7 @@
   > .ct-sticker_frame {
     width: 188px;
     height: 100%;
-    background-color: @26grey;
+    background-color: $grey_26;
     float: left;
     -webkit-border-radius: 1px 0 0 1px;
 
@@ -57,7 +55,7 @@
       font-size: 10px;
       padding-left: 14px;
       margin-top: 10px;
-      color: @purewhite;
+      color: $purewhite;
       background-repeat: no-repeat;
       cursor: pointer;
 
@@ -110,7 +108,7 @@
       position: relative;
       padding-top: 3px;
       padding-bottom: 3px;
-      color: @33grey;
+      color: $grey_33;
       display: block;
       overflow: hidden;
       white-space: nowrap;
@@ -123,7 +121,7 @@
         position: absolute;
         top: 12px;
         left: 5px;
-        background-color: @ccgrey;
+        background-color: $grey_cc;
         border-radius: 3px;
       }
 
@@ -136,7 +134,7 @@
       }
 
       &:hover {
-        color: @turquoiseblue;
+        color: $turquoiseblue;
 
         &:before{
           display: none;
@@ -149,13 +147,13 @@
     }
 
     > .ct-more_link {
-      color: @33grey;
+      color: $grey_33;
       cursor: pointer;
       padding-left: 21px;
       margin-top: 6px;
 
       &:hover {
-        color: @turquoiseblue;
+        color: $turquoiseblue;
       }
     }
   }
@@ -164,10 +162,10 @@
 /*sticker is separate from the rest because it is used standalone in the epitome*/
 .ct-sticker {
 
-  margin: 0 @margin_normal @margin_normal 0;
+  margin: 0 $margin_normal $margin_normal 0;
 
   float: left;
-  background-color: @purewhite;
+  background-color: $purewhite;
   position: relative;
 
   > .ct-sticker_image {
@@ -190,7 +188,7 @@
     background-color: rgba(0,0,0,0.6);
     opacity: 0.1;
     cursor: default;
-    color: @purewhite;
+    color: $purewhite;
 
     &.ct-edit_open {
       opacity: 1;
@@ -215,7 +213,7 @@
     height: 70px;
     -webkit-box-sizing: border-box;
     padding-bottom: 0;
-    background-color: @azulgreen;
+    background-color: $azulgreen;
     position: relative;
 
     > .ct-sticker_title {
@@ -224,7 +222,7 @@
       padding-right: 20px;
       max-width: 240px;
       -webkit-box-sizing: border-box;
-      color: @purewhite;
+      color: $purewhite;
       font-size: 16px;
       display: -webkit-inline-box;
       -webkit-line-clamp: 2;
@@ -241,7 +239,7 @@
       top: 15px;
       left: 22px;
       border-radius: 21px;
-      background-color: @darkgreen;
+      background-color: $darkgreen;
 
       &.ct-private {
         &:before {
@@ -252,7 +250,7 @@
           left: 16px;
           border-radius: 4px 4px 0 0;
           content: "";
-          border: solid 2px @purewhite;
+          border: solid 2px $purewhite;
         }
 
         &:after {
@@ -262,7 +260,7 @@
           left: 15px;
           position: absolute;
           content: "";
-          background-color: @purewhite;
+          background-color: $purewhite;
         }
 
         > .ct-private_legend {
@@ -272,7 +270,7 @@
           left: -10px;
           top: -77px;
           position: absolute;
-          color: @purewhite;
+          color: $purewhite;
           text-align: center;
           font-size: 12px;
           padding: 9px;
@@ -306,9 +304,9 @@
     position: absolute;
     left: 258px;
     top: -20px;
-    background-color: @purewhite;
+    background-color: $purewhite;
     z-index: 1;
-    border: solid 1px @degrey;
+    border: solid 1px $grey_de;
     padding: 22px;
     -webkit-box-sizing: border-box;
 
@@ -319,7 +317,7 @@
       left: -15px;
     	border-top: 20px solid transparent;
     	border-bottom: 20px solid transparent;
-    	border-right: 15px solid @degrey;
+    	border-right: 15px solid $grey_de;
     }
 
     &:after {
@@ -329,7 +327,7 @@
       left: -14px;
     	border-top: 20px solid transparent;
     	border-bottom: 20px solid transparent;
-    	border-right: 15px solid @purewhite;
+    	border-right: 15px solid $purewhite;
     }
 
     &.ct-left_edit {
@@ -339,7 +337,7 @@
         left: 274px;
       	border-top: 20px solid transparent;
       	border-bottom: 20px solid transparent;
-      	border-left: 15px solid @degrey;
+      	border-left: 15px solid $grey_de;
         border-right: none;
       }
 
@@ -347,20 +345,20 @@
         left: 273px;
       	border-top: 20px solid transparent;
       	border-bottom: 20px solid transparent;
-      	border-left: 15px solid @purewhite;
+      	border-left: 15px solid $purewhite;
         border-right: none;
       }
     }
 
     > .ct-sticker_edit_title {
-      border-bottom: solid 1px @bfgrey;
+      border-bottom: solid 1px $grey_bf;
       width: 100%;
       position: relative;
       font-size: 15px;
       text-align: center;
       outline: none;
       -webkit-box-sizing: border-box;
-      color: @pureblack;
+      color: $pureblack;
       text-transform: capitalize;
 
       &:empty {
@@ -370,19 +368,19 @@
     }
 
     > .ct-sticker_edit_title_legend {
-      color: @bfgrey;
+      color: $grey_bf;
       font-size: 12px;
       margin-bottom: 20px;
       cursor: default;
     }
 
     > .ct-image_picker {
-      color: @bfgrey;
+      color: $grey_bf;
       width: 100%;
       position: relative;
 
       > .ct-image_picker_legend {
-        color: @bfgrey;
+        color: $grey_bf;
         font-size: 12px;
         cursor: default;
         margin-bottom: 5px;
@@ -409,7 +407,7 @@
               position: absolute;
               width: 21px;
               height: 21px;
-              background-color: @azulgreen;
+              background-color: $azulgreen;
               border-radius: 10px;
               content: "";
               top: 12px;
@@ -420,8 +418,8 @@
               position: absolute;
               width: 3px;
               height: 7px;
-              border-bottom: solid 2px @purewhite;
-              border-right: solid 2px @purewhite;
+              border-bottom: solid 2px $purewhite;
+              border-right: solid 2px $purewhite;
               -webkit-transform: rotate(45deg);
               content: "";
               top: 17px;
@@ -435,7 +433,7 @@
         position: absolute;
         top: 40px;
         display: block;
-        border-top: solid 7px @94grey;
+        border-top: solid 7px $grey_94;
         border-right: solid 7px transparent;
         border-left: solid 7px transparent;
         cursor: pointer;
@@ -445,7 +443,7 @@
           left: -7px;
           top: -9px;
           display: block;
-          border-top: solid 7px @purewhite;
+          border-top: solid 7px $purewhite;
           border-right: solid 7px transparent;
           border-left: solid 7px transparent;
           content: "";
@@ -469,8 +467,8 @@
       left: 0;
       width: 100%;
       height: 45px;
-      color: @purewhite;
-      background-color: @deletered;
+      color: $purewhite;
+      background-color: $deletered;
       -webkit-box-sizing: border-box;
       padding-top: 8px;
       text-align: center;
@@ -522,7 +520,7 @@
     top: 0;
     text-align: center;
     padding-top: 70px;
-    color: @purewhite;
+    color: $purewhite;
     cursor: pointer;
     -webkit-box-sizing: border-box;
     -webkit-line-clamp: 2;
@@ -545,7 +543,7 @@
     -webkit-transform: rotate(45deg);
     cursor: pointer;
     opacity: 0.3;
-    color: @purewhite;
+    color: $purewhite;
   }
 
   &:hover {

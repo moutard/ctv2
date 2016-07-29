@@ -97,6 +97,17 @@ module.exports = function(grunt) {
                   filename: 'worker_dbscan3.min.js'
               }
             }
+        },
+        'sass': {
+          dist: {
+            options: {
+              style: 'expanded',
+              trace: true
+            },
+            files: {
+              'dist/app/main.min.css': DESTINATION_PATH + '/app/media/main.scss'
+            }
+          }
         }
       });
 
@@ -104,9 +115,11 @@ module.exports = function(grunt) {
       grunt.loadNpmTasks('grunt-chrome-manifest');
       grunt.loadNpmTasks('grunt-webpack');
       grunt.loadNpmTasks('grunt-contrib-copy');
+      grunt.loadNpmTasks('grunt-contrib-sass');
+
 
       grunt.registerTask('install', ['bower-install-simple']);
-      grunt.registerTask('build', ['copy:dev', 'webpack:woody', 'webpack:background', 'webpack:content_scripts', 'webpack:worker_dbscan2', 'webpack:worker_dbscan3']);
+      grunt.registerTask('build', ['copy:dev', 'webpack:woody', 'webpack:background', 'webpack:content_scripts', 'webpack:worker_dbscan2', 'webpack:worker_dbscan3', 'sass']);
 
 
 };
