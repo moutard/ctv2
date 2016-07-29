@@ -1,7 +1,8 @@
 const angular = require('angular');
 require('angular-route');
+require('view/ng/topbar/topbar.directive.js');
 
-angular.module('myApp', ['ngRoute'])
+angular.module('app', ['ngRoute', 'topbar'])
 .provider('Weather', function() {
   var apiKey = "";
 
