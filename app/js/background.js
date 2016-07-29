@@ -9,7 +9,7 @@ require ('underscore');
  * a module directory in the webpack configuration defined in Gruntfile.js
  */
 require ('cotton');
-require ('./class.js');
+require ('lib/class.js');
 require ('config/');
 
 require ('core/chrome/');

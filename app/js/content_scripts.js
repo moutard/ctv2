@@ -1,7 +1,7 @@
 require ('jquery');
 require ('underscore');
 require ('lib/jquery.livequery.js');
-require ('class.js');
+require ('lib/class.js');
 
 require ('model/');
 require ('core/chrome/index.js');

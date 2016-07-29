@@ -8,7 +8,7 @@
 // Worker has no access to external librairies loaded in the main thread.
 // Cotton.lib.
 require ('underscore');
-require ('class.js');
+require ('lib/class.js');
 require ('cotton');
 
 // Cotton.utils.
