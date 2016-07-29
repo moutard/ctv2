@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.1.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'livequery' ]
+2 info using npm@2.14.7
+3 info using node@v5.1.0
+4 verbose install initial load of /Users/moutardr/Downloads/ct/package.json
+5 warn package.json cottonTracks@2.5.2-27 No repository field.
+6 warn package.json cottonTracks@2.5.2-27 No license field.
+7 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/angular/package.json
+8 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/angular-bootstrap/package.json
+9 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/angular-route/package.json
+10 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/angular-translate/package.json
+11 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/angular-ui-router/package.json
+12 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/bootstrap/package.json
+13 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/bower/package.json
+14 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/google-closure-compiler/package.json
+15 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/grunt/package.json
+16 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/grunt-bower-install-simple/package.json
+17 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/grunt-chrome-manifest/package.json
+18 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/grunt-contrib-copy/package.json
+19 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/grunt-crx/package.json
+20 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/grunt-webpack/package.json
+21 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/jquery/package.json
+22 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/moment/package.json
+23 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/underscore/package.json
+24 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/webpack/package.json
+25 verbose installManyTop reading scoped package data from /Users/moutardr/Downloads/ct/node_modules/webpack-dev-server/package.json
+26 info package.json angular-bootstrap@0.12.2 No README data
+27 info package.json grunt@0.4.5 No license field.
+28 info package.json grunt-webpack@1.0.11 No license field.
+29 info package.json grunt-crx@0.3.4 No license field.
+30 info package.json grunt-chrome-manifest@0.3.0 No license field.
+31 verbose readDependencies loading dependencies from /Users/moutardr/Downloads/ct/package.json
+32 silly cache add args [ 'livequery', null ]
+33 verbose cache add spec livequery
+34 silly cache add parsed spec Result {
+34 silly cache add   raw: 'livequery',
+34 silly cache add   scope: null,
+34 silly cache add   name: 'livequery',
+34 silly cache add   rawSpec: '',
+34 silly cache add   spec: '*',
+34 silly cache add   type: 'range' }
+35 silly addNamed livequery@*
+36 verbose addNamed "*" is a valid semver range for livequery
+37 silly addNameRange { name: 'livequery', range: '*', hasData: false }
+38 silly mapToRegistry name livequery
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry uri https://registry.npmjs.org/livequery
+42 verbose addNameRange registry:https://registry.npmjs.org/livequery not in flight; fetching
+43 verbose request uri https://registry.npmjs.org/livequery
+44 verbose request no auth needed
+45 info attempt registry request try #1 at 12:02:39 PM
+46 verbose request id 26f3c47d3e314a70
+47 http request GET https://registry.npmjs.org/livequery
+48 http 404 https://registry.npmjs.org/livequery
+49 verbose headers { 'content-type': 'application/json',
+49 verbose headers   'cache-control': 'max-age=0',
+49 verbose headers   'content-length': '2',
+49 verbose headers   'accept-ranges': 'bytes',
+49 verbose headers   date: 'Fri, 29 Jul 2016 11:02:39 GMT',
+49 verbose headers   via: '1.1 varnish',
+49 verbose headers   age: '0',
+49 verbose headers   connection: 'keep-alive',
+49 verbose headers   'x-served-by': 'cache-lhr6329-LHR',
+49 verbose headers   'x-cache': 'MISS',
+49 verbose headers   'x-cache-hits': '0',
+49 verbose headers   'x-timer': 'S1469790159.708935,VS0,VE91',
+49 verbose headers   vary: 'Accept-Encoding' }
+50 silly get cb [ 404,
+50 silly get   { 'content-type': 'application/json',
+50 silly get     'cache-control': 'max-age=0',
+50 silly get     'content-length': '2',
+50 silly get     'accept-ranges': 'bytes',
+50 silly get     date: 'Fri, 29 Jul 2016 11:02:39 GMT',
+50 silly get     via: '1.1 varnish',
+50 silly get     age: '0',
+50 silly get     connection: 'keep-alive',
+50 silly get     'x-served-by': 'cache-lhr6329-LHR',
+50 silly get     'x-cache': 'MISS',
+50 silly get     'x-cache-hits': '0',
+50 silly get     'x-timer': 'S1469790159.708935,VS0,VE91',
+50 silly get     vary: 'Accept-Encoding' } ]
+51 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/livequery
+51 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+51 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+51 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+51 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+51 verbose stack     at emitTwo (events.js:87:13)
+51 verbose stack     at Request.emit (events.js:172:7)
+51 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+51 verbose stack     at emitOne (events.js:82:20)
+51 verbose stack     at Request.emit (events.js:169:7)
+51 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+52 verbose statusCode 404
+53 verbose pkgid livequery
+54 verbose cwd /Users/moutardr/Downloads/ct
+55 error Darwin 14.5.0
+56 error argv "/usr/local/Cellar/node/5.1.0/bin/node" "/usr/local/bin/npm" "install" "--save" "livequery"
+57 error node v5.1.0
+58 error npm  v2.14.7
+59 error code E404
+60 error 404 Registry returned 404 for GET on https://registry.npmjs.org/livequery
+60 error 404
+60 error 404 'livequery' is not in the npm registry.
+60 error 404 You should bug the author to publish it (or use the name yourself!)
+60 error 404 It was specified as a dependency of 'cottonTracks'
+60 error 404
+60 error 404 Note that you can also install from a
+60 error 404 tarball, folder, http url, or git url.
+61 verbose exit [ 1, true ]

@@ -18,6 +18,9 @@ module.exports = function(grunt) {
         'window.jQuery': 'jquery',
         '_': 'underscore',
         Cotton: 'cotton'
+      }),
+      new webpack.DefinePlugin({
+        'DEBUG': true
       })
     ];
     if (IS_PROD) {

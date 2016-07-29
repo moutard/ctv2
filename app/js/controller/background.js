@@ -1,5 +1,6 @@
 'use strict';
 
+require ('./new_version.js');
 /**
  * I think The background page should never be displayed. So all the UI part
  * should be in lightyear page.
@@ -54,7 +55,7 @@ Cotton.Controllers.Background = Class.extend({
           Cotton.ANALYTICS.install(sVersion);
           break;
         case 'update':
-          new Cotton.Core.Notification(details['previousVersion']);
+          new Cotton.Controllers.NewVersion(details['previousVersion']);
           Cotton.ANALYTICS.update(sVersion);
           break;
         case 'chrome_update':

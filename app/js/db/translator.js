@@ -1,5 +1,13 @@
 'use strict';
 
+require ('cotton');
+
+Cotton.DB = Cotton.DB || {};
+
+/**
+ * A translator is used to convert an dbRecord comming from a database to
+ * an object.
+ */
 Cotton.DB.Translator = Class.extend({
 
   init : function(sFormatVersion, mObjectToDbRecordConverter,
