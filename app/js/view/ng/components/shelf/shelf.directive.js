@@ -12,6 +12,6 @@ angular.module('shelf', [])
 .directive('ctShelf', function() {
     return {
         restrict: 'E',
-        templateUrl: 'js/view/ng/components/shelf/shelf.directive.html'
+        template: require('./shelf.directive.html')
     };
 });

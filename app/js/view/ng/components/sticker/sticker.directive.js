@@ -12,6 +12,6 @@ angular.module('sticker', [])
 .directive('ctSticker', function() {
     return {
         restrict: 'E',
-        templateUrl: 'js/view/ng/components/sticker/sticker.directive.html'
+        template: require('./sticker.directive.html')
     };
 });

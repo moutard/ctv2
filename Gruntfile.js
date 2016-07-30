@@ -55,7 +55,18 @@ module.exports = function(grunt) {
                cotton: 'cotton.js'
              }
            },
-           plugins: webpack_plugins
+           plugins: webpack_plugins,
+           module: {
+            loaders: [
+                // https://github.com/webpack/html-loader - Bundle HTML templates with the app
+                // :: ATTENTION :: DO NOT USE ng-include anywhere in the templates because it will not work.
+                // :: Just create a custom directive and use that!
+                {
+                    test: /\.html$/,
+                    loader: 'html'
+                }
+            ]
+        },
          },
          woody: {
               // webpack options
