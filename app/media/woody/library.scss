@@ -1,9 +1,9 @@
 
 .ct-library, .ct-timeline {
-  > .ct-library_container, .ct-shelves_container {
+  .ct-library_container, .ct-shelves_container {
 
     margin: 20px 5% 0 5%;
-    > .ct-shelf {
+    .ct-shelf {
       width: 100%;
       position: relative;
       overflow: hidden;

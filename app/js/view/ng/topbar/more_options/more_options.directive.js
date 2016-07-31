@@ -11,7 +11,16 @@ angular.module('topbar')
 
     function controller($scope) {
        $scope.goToSettings = function() {
+         $scope.isVisible = false;
          $state.go('settings');
+       };
+
+       $scope.goToHome = function() {
+         $scope.isVisible = false;
+         $state.go('home');
+       };
+
+       $scope.openRateUsModal = function() {
        };
    }
 });
