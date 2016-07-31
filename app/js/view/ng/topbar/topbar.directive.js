@@ -12,8 +12,17 @@ angular.module('topbar', [])
 .directive('ctTopbar', function() {
     return {
         restrict: 'E',
-        template: require ('./topbar.directive.html')
+        template: require ('./topbar.directive.html'),
+        controller: controller
     };
+
+    function controller ($scope, $state) {
+      $scope.isVisible = false;
+
+      $scope.toogleMoreOptions = function() {
+        $scope.isVisible = ! $scope.isVisible;
+      }
+    }
 });
 
 require ('./more_options/more_options.directive.js');

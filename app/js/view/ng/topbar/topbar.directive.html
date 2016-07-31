@@ -14,7 +14,7 @@
       <input class="ct-search_field" placeholder="Search your online memory"/>
       <div class="ct-search_button"><div class="ct-search_button_icon"></div></div>
     </div>
-    <div class="svg ct-topbar_hamburger_menu"><img src="/media/images/topbar/hamburger_menu.svg" alt="Hamburger Menu"></div>
+    <div class="svg ct-topbar_hamburger_menu" ng-click="toogleMoreOptions()"><img src="/media/images/topbar/hamburger_menu.svg" alt="More Options"></div>
   </div>
-  <ct-topbar-more-options></ct-topbar-more-options>
+  <ct-topbar-more-options is-visible=isVisible></ct-topbar-more-options>
 </div>

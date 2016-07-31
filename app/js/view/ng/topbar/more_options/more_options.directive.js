@@ -3,7 +3,10 @@ angular.module('topbar')
     return {
         restrict: 'E',
         template: require ('./more_options.directive.html'),
-        controller : controller
+        controller : controller,
+        scope: {
+          isVisible: '=',
+        },
     };
 
     function controller($scope) {
