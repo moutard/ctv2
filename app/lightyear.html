@@ -8,8 +8,15 @@
 <body ng-app="app">
 
   <ct-topbar></ct-topbar>
-  <ct-home></ct-home>
+  <div ui-view></div>
   <ct-footer></ct-footer>
+
+
+  <!-- We'll also add some navigation: -->
+  <a ui-sref="settings">Settings</a>
+  <a ui-sref="home">Home</a>
+  <a ui-sref="curator">Curator</a>
+
 
   <script src="./woody.min.js"></script>
 </body>

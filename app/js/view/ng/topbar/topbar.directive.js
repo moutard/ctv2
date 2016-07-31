@@ -8,8 +8,6 @@
  * Displays the topbar that contains the logo, navigation arrows, search and hamburger menu.
  *
  */
-
-
 angular.module('topbar', [])
 .directive('ctTopbar', function() {
     return {

@@ -1,14 +1,22 @@
 const angular = require('angular');
 require('angular-route');
+require('angular-ui-router');
 require('view/ng/topbar/topbar.directive.js');
 require('view/ng/footer/footer.directive.js');
-require('view/ng/pages/home/home.directive.js');
-require('view/ng/timeline/timeline.directive.js');
+require('view/ng/pages/curator/curator.controller.js');
+require('view/ng/pages/home/home.controller.js');
+require('view/ng/pages/search/search.controller.js');
+require('view/ng/pages/settings/settings.controller.js');
+require('view/ng/pages/story/story.controller.js');
+
+require('view/ng/pages/home/timeline/timeline.directive.js');
 require('view/ng/components/shelf/shelf.directive.js');
 require('view/ng/components/sticker/sticker.directive.js');
 
+require ('view/ng/route.js');
 
-angular.module('app', ['ngRoute', 'topbar', 'footer', 'home', 'timeline', 'shelf', 'sticker'])
+angular.module('app', ['topbar', 'footer', 'timeline', 'shelf', 'sticker', 'appRouting',
+'curator', 'home', 'search', 'settings', 'story'])
 .provider('Weather', function() {
   var apiKey = "";
 
@@ -78,18 +86,6 @@ angular.module('app', ['ngRoute', 'topbar', 'footer', 'home', 'timeline', 'shelf
 .config(function(WeatherProvider) {
   WeatherProvider.setApiKey('REPLACE_WITH_YOUR_KEY');
 })
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'templates/home.html',
-      controller: 'MainCtrl'
-    })
-    .when('/settings', {
-      templateUrl: 'templates/settings.html',
-      controller: 'SettingsCtrl'
-    })
-    .otherwise({redirectTo: '/'});
-}])
 .directive('autoFill', function($timeout, Weather) {
   return {
     restrict: 'EA',
