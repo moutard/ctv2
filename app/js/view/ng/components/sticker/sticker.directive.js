@@ -8,7 +8,9 @@
  * Displays the topbar that contains the logo, navigation arrows, search and hamburger menu.
  *
  */
-angular.module('sticker', [])
+ require('../sticker-image/sticker-image.directive.js');
+
+angular.module('sticker', ['stickerImage'])
 .directive('ctSticker', function() {
     return {
         restrict: 'E',

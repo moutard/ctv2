@@ -1,0 +1,154 @@
+/**
+ * Common.Cover
+ */
+.ct-cover {
+  width: 396px;
+  height: 250px;
+  margin-left: 1px;
+  background: $grey_f5;
+  position: absolute;
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
+  -webkit-border-radius: 2px 1px 1px 2px;
+
+  &.ct-related_cover {
+    margin-top: 1px;
+  }
+
+  &.ct-animate {
+    -webkit-transition-property: top left;
+    -webkit-transition-duration: 0.6s;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 2px -3px rgba(0, 0, 0, 0.25);
+  }
+
+  > .ct-sticker_frame {
+    width: 188px;
+    height: 100%;
+    background-color: $grey_26;
+    float: left;
+    -webkit-border-radius: 1px 0 0 1px;
+
+    > .ct-sticker {
+
+      > .ct-sticker_image {
+        cursor: pointer;
+      }
+    }
+
+    > .ct-cover_action {
+      position: relative;
+      height: 12px;
+      font-size: 10px;
+      padding-left: 14px;
+      margin-top: 10px;
+      color: $purewhite;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &.ct-delete_cover {
+        float: right;
+        margin-right: 19px;
+        background-image: url('/media/images/common/ct-icons.png');
+        background-position-y : -29px;
+      }
+
+      &.ct-favorite_story {
+        float: left;
+        margin-left: 19px;
+
+        &:before {
+          content: "";
+          width: 12px;
+          background-image: url('/media/images/common/ct-icons.png');
+          background-position: 0 -83px;
+          height: 12px;
+          position: absolute;
+          left: 0;
+        }
+      }
+
+      &.ct-unfavorite_story {
+        float: left;
+        margin-left: 19px;
+
+        &:before {
+          content: "";
+          width: 12px;
+          background-image: url('/media/images/common/ct-icons.png');
+          background-position: -14px -83px;
+          height: 12px;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  > .ct-cover_preview {
+    padding: 10px;
+    overflow: hidden;
+    font-family: SourceSansPro-Regular;
+    font-size: 12px;
+
+    > .ct-preview_link {
+      position: relative;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      color: $grey_33;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &:before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 12px;
+        left: 5px;
+        background-color: $grey_cc;
+        border-radius: 3px;
+      }
+
+      > .ct-preview_favicon {
+        position: relative;
+        top: 4px;
+        opacity: 0;
+        margin-right: 4px;
+        width: 16px;
+      }
+
+      &:hover {
+        color: $turquoiseblue;
+
+        &:before{
+          display: none;
+        }
+
+        > .ct-preview_favicon {
+          opacity: 1;
+        }
+      }
+    }
+
+    > .ct-more_link {
+      color: $grey_33;
+      cursor: pointer;
+      padding-left: 21px;
+      margin-top: 6px;
+
+      &:hover {
+        color: $turquoiseblue;
+      }
+    }
+  }
+}
