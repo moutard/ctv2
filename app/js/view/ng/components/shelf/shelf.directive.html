@@ -1,8 +1,8 @@
 <div class="ct-shelf">
   <div class="ct-shelf_title">
-    <div class="ct-h1">today</div><div class="ct-line"></div>
+    <div class="ct-h1">{{::shelfTitle}}</div><div class="ct-line"></div>
   </div>
   <div class="ct-covers_container">
-    <ct-sticker></ct-sticker>
+    <ct-sticker ng-repeat="story in stories" story="story"></ct-sticker>
   </div>
 </div>

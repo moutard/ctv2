@@ -11,9 +11,21 @@
  require('../sticker-image/sticker-image.directive.js');
 
 angular.module('sticker', ['stickerImage'])
-.directive('ctSticker', function() {
+.directive('ctSticker', function($state) {
     return {
         restrict: 'E',
-        template: require('./sticker.directive.html')
+        template: require('./sticker.directive.html'),
+        scope: {
+          story: '='
+        },
+        controller: controller
     };
+
+    function controller ($scope) {
+      $scope.openStory = function (storyId) {
+        $state.go('story', {'sid': storyId});
+      };
+    }
+
+
 });

@@ -1,6 +1,10 @@
 const angular = require('angular');
 require('angular-route');
 require('angular-ui-router');
+
+require ('cotton');
+require ('lib/class.js');
+
 require('view/ng/topbar/topbar.directive.js');
 require('view/ng/footer/footer.directive.js');
 require('view/ng/pages/curator/curator.controller.js');
@@ -14,9 +18,10 @@ require('view/ng/components/shelf/shelf.directive.js');
 require('view/ng/components/sticker/sticker.directive.js');
 
 require ('view/ng/route.js');
+require ('view/ng/services/database.js');
 
 angular.module('app', ['topbar', 'footer', 'timeline', 'shelf', 'sticker', 'appRouting',
-'curator', 'home', 'search', 'settings', 'story'])
+'curator', 'home', 'search', 'settings', 'story', 'databaseService'])
 .provider('Weather', function() {
   var apiKey = "";
 

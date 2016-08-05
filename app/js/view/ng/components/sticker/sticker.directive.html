@@ -1,10 +1,10 @@
-<div class="ct-sticker">
+<div class="ct-sticker" ng-click="openStory(story.id)">
   <ct-sticker-image image-url="./media/images/story/card/ct-broken_image.png"></ct-sticker-image>
   <div class="ct-sticker_edit_button">Edit</div>
   <div class="ct-sticker_label">
     <div class="ct-sticker_visibility ct-private">
       <div class="ct-private_legend">This is private.</br>Everything is stored on</br>your computer.</div>
     </div>
-    <div class="ct-sticker_title">First story</div>
+    <div class="ct-sticker_title">{{story.title}}</div>
   </div>
 </div>
