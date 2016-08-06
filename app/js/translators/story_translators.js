@@ -1,4 +1,5 @@
 'use strict';
+require ('model/');
 
 Cotton.Translators.STORY_TRANSLATORS = [];
 

@@ -1,3 +1,3 @@
-angular.module('home', [])
-.controller('HomeController', function() {
+angular.module('home', ['databaseService'])
+.controller('HomeController', function(databaseService) {
 });

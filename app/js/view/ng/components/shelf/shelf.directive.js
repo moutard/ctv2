@@ -20,7 +20,7 @@ angular.module('shelf', [])
     };
 
     function controller ($scope) {
-      $scope.shelfTitle = "TODAY";
-      $scope.stories = [{title: "Mario", id: "1"}, {title:"Zelda", id:"2"}];
+      $scope.shelfTitle = $scope.shelf.title;
+      $scope.stories = $scope.shelf.stories;
     }
 });
