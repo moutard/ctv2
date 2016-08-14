@@ -1,5 +1,6 @@
 'use strict';
 var Cotton = require('cotton');
+require ('config/');
 
 var _gaq = _gaq || [];
 

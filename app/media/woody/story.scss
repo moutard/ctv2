@@ -1,0 +1,19 @@
+
+.ct-story {
+  padding-top : $topbar_height;
+  margin: 5%;
+
+  .ct-story_container {
+
+    display: flex;
+
+    > .ct-story_dashboard {
+    }
+
+    > .ct-story_deck {
+      background-color: $purewhite;
+      flex: 1;
+    }
+  }
+
+}

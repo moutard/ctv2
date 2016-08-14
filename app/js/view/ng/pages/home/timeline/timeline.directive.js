@@ -1,5 +1,5 @@
-angular.module('timeline', ['databaseService'])
-.directive('ctTimeline', function($q, databaseService) {
+angular.module('timeline', ['storyService'])
+.directive('ctTimeline', function($q, storyService) {
     return {
         restrict: 'E',
         template: require('./timeline.directive.html'),
@@ -31,11 +31,9 @@ angular.module('timeline', ['databaseService'])
 
       var fLastVisitTime = dArguments['fLastVisitTime'] || new Date().getTime();
 
-      databaseService.database().then(function (oDatabase) {
-        databaseService._getStoriesByBatch(fLastVisitTime, 20, function (lStories, bNoMoreStories) {
-          var lShelves = createShelves(lStories, scope);
-          deferred.resolve(lShelves);
-        });
+      storyService.getStoriesByBatch(fLastVisitTime, 20).then(function (lStories, bNoMoreStories) {
+        var lShelves = createShelves(lStories, scope);
+        deferred.resolve(lShelves);
       });
 
       return deferred.promise;

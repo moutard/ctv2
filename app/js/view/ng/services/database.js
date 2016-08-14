@@ -1,5 +1,6 @@
 require ('db/');
 require ('translators/');
+require ('utils/');
 
 
 angular.module('databaseService', [])
@@ -25,34 +26,4 @@ angular.module('databaseService', [])
     return deferred.promise;
   };
 
-  /**
-   * Get stories by batch from the database. But only get non empty stories.
-   *
-   * @param {Int}
-   *        iStartStories: number of stories already in the manager.
-   * @param {Float}
-   *        fLastVisitTime: the max fLastVisitTime we accept. (strict is true by
-   *        default so we don't take twice the same story.
-   */
-   this._getStoriesByBatch = function(fLastVisitTime, iBatchSize, mCallback) {
-      // loads a b(i)atch of iBatchSize stories.
-      // TODO(rkorach) see if we cannot speed the performance + percieved speed up.
-
-      self._oDatabase.getXItemsWithUpperBound('stories', iBatchSize,
-          'fLastVisitTime', 'PREV', fLastVisitTime, true,
-          function(lStories) {
-            // For each story get all the corresponding historyItems.
-            var iCount = 0;
-            var iLength = lStories.length;
-            // In this case we arrived at the end of the database.
-            var bNoMoreStories = false;
-            if (iLength < iBatchSize){ bNoMoreStories = true; }
-            if (iLength === 0) {
-              mCallback(lStories, bNoMoreStories);
-              return;
-            } else {
-              mCallback(lStories, bNoMoreStories);
-            }
-        });
-    };
 });

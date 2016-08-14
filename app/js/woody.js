@@ -19,9 +19,10 @@ require('view/ng/components/sticker/sticker.directive.js');
 
 require ('view/ng/route.js');
 require ('view/ng/services/database.js');
+require ('view/ng/services/story-service.js');
 
 angular.module('app', ['topbar', 'footer', 'timeline', 'shelf', 'sticker', 'appRouting',
-'curator', 'home', 'search', 'settings', 'story', 'databaseService'])
+'curator', 'home', 'search', 'settings', 'story', 'databaseService', 'storyService'])
 .provider('Weather', function() {
   var apiKey = "";
 
