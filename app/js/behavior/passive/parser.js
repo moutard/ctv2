@@ -183,7 +183,7 @@
              * @param {Node} oNode The node to filter.
              * @return {Number} NodeFilter.FILTER_ACCEPT or NodeFilter.FILTER_SKIP
              */
-            function(oNode){
+            function(oNode) {
               var oParent = oNode.parentNode;
               var mAncestor = Cotton.Utils.ancestor;
               var sContent = oNode.textContent;

@@ -1,5 +1,3 @@
 <div class="ct-story_deck">
-  <div ng-repeat="historyItem in historyItems">
-    {{historyItem.title()}}
-  </div>
+    <ct-card ng-repeat="historyItem in historyItems" history-item=historyItem></ct-card>
 </div>

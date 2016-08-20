@@ -1,0 +1,43 @@
+.icons {
+  width: 11px;
+  height: 11px;
+  background-image: url('/media/images/common/ct-icons.png');
+  background-repeat: no-repeat;
+}
+.icon_close_white {
+  @extend .icons;
+  background-position-x : -24px;
+}
+.icon_close_grey {
+  @extend .icons;
+  background-position-x : -12px;
+}
+.icon_close_black {
+  @extend .icons;
+  background-position-x : 0;
+}
+.icon_arrow_right_black {
+  @extend .icons;
+  background-position-x : 0;
+  background-position-y : 12px;
+}
+.icon_arrow_right_grey {
+  @extend .icons;
+  background-position-x : -12px;
+  background-position-y : 12px;
+}
+.icon_arrow_left_black {
+  @extend .icons;
+  background-position-x : -24px;
+  background-position-y : 12px;
+}
+.icon_arrow_left_grey {
+  @extend .icons;
+  background-position-x : -36px;
+  background-position-y : 12px;
+}
+.icon_search {
+  @extend .icons;
+  background-position-x: -67px;
+  background-position-y: -5px;
+}

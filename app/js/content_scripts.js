@@ -1,6 +1,5 @@
 require ('jquery');
 require ('underscore');
-require ('lib/jquery.livequery.js');
 require ('lib/class.js');
 
 require ('model/');

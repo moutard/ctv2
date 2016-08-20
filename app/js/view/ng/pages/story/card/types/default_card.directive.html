@@ -1,0 +1,11 @@
+<div class="ct-card">
+  <div ng-if="historyItem.image()" class="ct-media_image"></div>
+  <div class="ct-card_details">
+    <a ng-href="{{historyItem.url()}}" target="_blank" class="ct-card_title">{{historyItem.title()}}</a>
+    <div class="ct-card_website">
+      <img class="ct-card_favicon" ng-src="{{::domainFavicon}}">
+      <div class="ct-card_domain">{{::domainName}}</div>
+    </div>
+  </div>
+  <div class="ct-delete_card"></div>
+</div>

@@ -16,13 +16,14 @@ require('view/ng/pages/story/story.controller.js');
 require('view/ng/pages/home/timeline/timeline.directive.js');
 require('view/ng/components/shelf/shelf.directive.js');
 require('view/ng/components/sticker/sticker.directive.js');
+require('view/ng/pages/story/card/card.directive.js');
 
 require ('view/ng/route.js');
 require ('view/ng/services/database.js');
 require ('view/ng/services/story-service.js');
 
 angular.module('app', ['topbar', 'footer', 'timeline', 'shelf', 'sticker', 'appRouting',
-'curator', 'home', 'search', 'settings', 'story', 'databaseService', 'storyService'])
+'curator', 'home', 'search', 'settings', 'story', 'databaseService', 'storyService', 'cards'])
 .provider('Weather', function() {
   var apiKey = "";
 
@@ -89,9 +90,12 @@ angular.module('app', ['topbar', 'footer', 'timeline', 'shelf', 'sticker', 'appR
   service.restore();
   return service;
 })
-.config(function(WeatherProvider) {
-  WeatherProvider.setApiKey('REPLACE_WITH_YOUR_KEY');
-})
+.config(['$compileProvider', function($compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|chrome):/);
+        $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data|chrome-extension|chrome):/);
+        // Angular before v1.2 uses $compileProvider.urlSanitizationWhitelist(...)
+    }
+])
 .directive('autoFill', function($timeout, Weather) {
   return {
     restrict: 'EA',

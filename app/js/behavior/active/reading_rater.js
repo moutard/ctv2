@@ -122,18 +122,6 @@ Cotton.Behavior.Active.ReadingRater = Class.extend({
     // Launch almost immediately (but try to avoid freezing the page).
     setTimeout(mRefreshParsing, 0);
 
-    // Livequery is a plugin jQuery.
-    // For each block marked as meaningfull by the parser, the reading-rater
-    // will compute a score and will add it to the DOM data.
-    $('[data-meaningful]').livequery(function() {
-      var $block = $(this);
-      var oScore = $block.data('score');
-      if (!oScore) {
-        oScore = new Cotton.Behavior.Active.Score($block);
-        $block.data('score', oScore);
-      }
-    });
-
     var mRefreshReadingRate = function() {
       // Do not increase scores if the document is inactive.
       if (self._bDocumentActive) {
@@ -315,6 +303,9 @@ Cotton.Behavior.Active.ReadingRater = Class.extend({
           iVisibleSurface : iVisibleSurface,
           iTotalSurface : iTotalSurface
         });
+      } else {
+          oScore = new Cotton.Behavior.Active.Score($block);
+          $block.data('score', oScore);
       }
       // TODO(fwouts): Check if it is ever possible to not have oScore.
     });

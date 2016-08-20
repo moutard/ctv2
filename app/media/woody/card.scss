@@ -1,0 +1,68 @@
+.ct-card {
+  position: relative;
+  width: 425px;
+  height: 250px;
+  float: left;
+  margin: 0 $margin_normal $margin_normal 0;
+  background-color: $purewhite;
+  -webkit-box-sizing: border-box;
+
+  .ct-delete_card {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    cursor: pointer;
+    @extend .icon_close_grey;
+
+    &:hover {
+      @extend .icon_close_black;
+    }
+  }
+
+  .ct-card_details {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    height: 100%;
+    padding: $margin_normal;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > .ct-card_title {
+      width: 100%;
+      font-size: 14px;
+      color: $grey_33;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    > .ct-card_url {
+      padding: 0 $margin_normal 0 $margin_normal;
+      -webkit-box-sizing: border-box;
+      margin-left: -30px;
+      position: absolute;
+      bottom: 50px;
+      text-align: center;
+      color: $grey_26;
+      width: 100%;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .ct-card_domain {
+    margin-left: 5px;
+    float: left;
+  }
+
+  .ct-card_favicon {
+    width: 16px;
+    float: left;
+  }
+}
