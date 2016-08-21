@@ -1,8 +1,10 @@
+$fa-font-path:   "media/node_modules/font-awesome/fonts";
+@import "font-awesome/scss/font-awesome";
+
 @import "woody/_variables.scss";
 @import "woody/_icons.scss";
 @import "woody/common.scss";
 @import "woody/cards.scss";
-@import "woody/cheesecake.scss";
 @import "woody/home.scss";
 @import "woody/jquery-ui-override.scss";
 @import "woody/library.scss";
